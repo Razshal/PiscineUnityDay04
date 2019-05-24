@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Sonic : MonoBehaviour
@@ -287,7 +288,7 @@ public class Sonic : MonoBehaviour
 	void newLife() {
 		isHit = false;
 		isDead = false;
-		Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 
 	void respawn() {
